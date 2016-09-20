@@ -31,8 +31,6 @@
                         <i class="fa fa-bars"></i>
                     </button>
                 </div>
-
-
             </div>
 
         </nav>
@@ -44,7 +42,7 @@
                     <div class="col-lg-12">
                         <br><br>
                         <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 text-center">
-                            <img class="center-block img img-responsive" src="/img/logo.png"
+                            <img class="center-block img img-responsive" src="{{asset('/img/logo.png')}}"
                                  style="width: 50%;height: 50%">
                             <h3>
                                 <b>
@@ -52,7 +50,7 @@
                                 </b>
                             </h3>
                             <form action="/login" method="post">
-                                <input type="hidden" name="_token" value="peWApyguBQTU6Oqh37BS1hG7uBGJZ11xGbXb8ixe">
+                                {{csrf_field()}}
                                 <div class="form-group has-feedback">
                                     <input type="text" class="form-control" placeholder="Email" name="email" required>
                                     <span class="glyphicon glyphicon-envelope form-control-feedback"></span>

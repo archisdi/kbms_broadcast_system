@@ -11,5 +11,5 @@
     @yield('h_script')
 
     <link rel="stylesheet" href="{{asset('/dist/css/AdminLTE.min.css')}}">
-    <link rel="stylesheet" href="{{asset('/dist/css/skins/skin-green-light.min.css')}}">
+    <link rel="stylesheet" href="{{asset('/dist/css/skins/skin-red-light.min.css')}}">
 </head>
