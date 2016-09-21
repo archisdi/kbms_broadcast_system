@@ -4,8 +4,8 @@
 
         <ul class="sidebar-menu">
             <li class="header">Menu</li>
-            <li><a href="#"><i class="fa fa-home text-red"></i> <span>Home</span></a></li>
-            <li><a href="#"><i class="fa fa-send text-aqua"></i> <span>Broadcast</span></a></li>
+            <li><a href="{{url('/')}}"><i class="fa fa-home text-red"></i> <span>Home</span></a></li>
+            <li><a href="{{url('/broadcast')}}"><i class="fa fa-send text-aqua"></i> <span>Broadcast</span></a></li>
             <li><a href="#"><i class="fa fa-laptop text-yellow"></i> <span>Modem</span></a></li>
             <li class="treeview">
                 <a href="#">

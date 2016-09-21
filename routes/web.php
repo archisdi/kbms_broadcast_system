@@ -10,9 +10,8 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
-Route::get('/','MainController@index');
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+
+Route::get('/','MainController@index');
+Route::get('/broadcast','MainController@broadcast');

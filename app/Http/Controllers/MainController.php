@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests;
 
 class MainController extends Controller
@@ -14,6 +14,15 @@ class MainController extends Controller
     }
 
     public function index(){
-        return view('home');
+        $data = [
+            "inbox" => DB::table('inbox')->get(),
+            "outbox" => DB::table('outbox')->get()
+        ];
+
+        return view('home',compact('data'));
+    }
+
+    public function broadcast(){
+        return view('broadcast');
     }
 }
