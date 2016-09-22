@@ -15,8 +15,9 @@ class MainController extends Controller
 
     public function index(){
         $data = [
-            "inbox" => DB::table('inbox')->get(),
-            "outbox" => DB::table('outbox')->get()
+            "inbox_count" => DB::table('inbox')->count(),
+            "outbox_count" => DB::table('outbox')->count(),
+            "inbox" => DB::table('inbox')->orderBy('ReceivingDateTime','desc')->paginate(10)
         ];
 
         return view('home',compact('data'));

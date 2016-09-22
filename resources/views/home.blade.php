@@ -27,7 +27,7 @@
 
                                     <div class="info-box-content">
                                         <span class="info-box-text">Inbox</span>
-                                        <span class="info-box-number">{{$data['inbox']->count()}}</span>
+                                        <span class="info-box-number">{{$data['inbox_count']}}</span>
                                     </div>
                                     <!-- /.info-box-content -->
                                 </div>
@@ -42,7 +42,7 @@
 
                                     <div class="info-box-content">
                                         <span class="info-box-text">Outbox</span>
-                                        <span class="info-box-number">{{$data['outbox']->count()}}</span>
+                                        <span class="info-box-number">{{$data['outbox_count']}}</span>
                                     </div>
                                     <!-- /.info-box-content -->
                                 </div>
@@ -58,21 +58,27 @@
                                     <h3 class="box-title">Inbox</h3>
                                     <!-- /.box-tools -->
                                 </div>
-                                <div class="table-responsive mailbox-messages">
-                                    <table class="table table-hover table-striped">
-                                        <tbody>
-                                        @foreach($data['inbox'] as $inbox)
-                                            <tr>
-                                                <td class="mailbox-name"><a
-                                                            href="read-mail.html">{{$inbox->SMSCNumber}}</a></td>
-                                                <td class="mailbox-subject">{{$inbox->TextDecoded}}</td>
-                                                <td class="mailbox-attachment"></td>
-                                                <td class="mailbox-date">{{$inbox->ReceivingDateTime}}</td>
-                                            </tr>
-                                        @endforeach
-                                        </tbody>
-                                    </table>
-                                    <!-- /.table -->
+                                <div class="box-body">
+                                    <div class="table-responsive mailbox-messages">
+                                        <table class="table table-hover table-striped">
+                                            <tbody>
+                                            @foreach($data['inbox'] as $inbox)
+                                                <tr>
+                                                    <td class="mailbox-name">{{$inbox->SMSCNumber}}</a></td>
+                                                    <td class="mailbox-subject">{{$inbox->TextDecoded}}</td>
+                                                    <td class="mailbox-attachment"></td>
+                                                    <td class="mailbox-date">{{$inbox->ReceivingDateTime}}</td>
+                                                </tr>
+                                            @endforeach
+                                            </tbody>
+                                        </table>
+                                        <!-- /.table -->
+                                    </div>
+                                </div>
+                                <div class="box-footer">
+                                    <span class="pull-right">
+                                    {{$data['inbox']->render()}}
+                                    </span>
                                 </div>
                                 <!-- /.mail-box-messages -->
                             </div>
