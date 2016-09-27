@@ -23,7 +23,4 @@ class MainController extends Controller
         return view('home',compact('data'));
     }
 
-    public function broadcast(){
-        return view('broadcast');
-    }
 }

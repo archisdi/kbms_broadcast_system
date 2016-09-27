@@ -14,7 +14,12 @@ Auth::routes();
 
 
 Route::get('/','MainController@index');
-Route::get('/broadcast','MainController@broadcast');
+
+Route::get('/broadcast/anggota','BroadcastController@anggota');
+Route::get('/broadcast/pengurus','BroadcastController@pengurus');
+Route::get('/broadcast/excel','BroadcastController@excel');
+Route::post('/broadcast/excel','BroadcastController@excelSend');
+Route::get('/broadcast/direct','BroadcastController@direct');
 
 Route::get('modem','ModemController@index');
 Route::get('modem/dir','ModemController@directory');
