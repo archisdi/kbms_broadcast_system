@@ -66,7 +66,6 @@
                                                 <tr>
                                                     <td class="mailbox-name">{{$inbox->SenderNumber}}</a></td>
                                                     <td class="mailbox-subject">{{$inbox->TextDecoded}}</td>
-                                                    <td class="mailbox-attachment"></td>
                                                     <td class="mailbox-date">{{$inbox->ReceivingDateTime}}</td>
                                                 </tr>
                                             @endforeach

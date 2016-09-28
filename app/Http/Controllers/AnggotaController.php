@@ -40,11 +40,6 @@ class AnggotaController extends Controller
         return view('anggota.anggota_show', compact('anggota'));
     }
 
-    public function search(Request $request){
-
-
-
-    }
 }
 
 
