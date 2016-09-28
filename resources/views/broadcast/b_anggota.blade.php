@@ -45,6 +45,7 @@
                                         <label>Angkatan</label>
                                         <select class="form-control" name="angkatan" required>
                                             <option value="all" selected>Semua</option>
+                                            <option value="2008">2008</option>
                                             <option value="2009">2009</option>
                                             <option value="2010">2010</option>
                                             <option value="2011">2011</option>
